@@ -40,15 +40,16 @@
     </header>
 
     <main>
-        <br><br><br><br>
-
+        <br>
+        <br>
+        <br>
         <div class="container">
             <h2 class="text-center mb-4 text-white">
                 Sampah apa aja sih yang bisa dipakai untuk daur ulang?
             </h2>
-
+            <br>
             <div class="d-flex justify-content-center">
-                <div class="card p-3 " style="width:35rem; background-color: #d1e3ff;">
+                <div class="card p-3" style="width:35rem; background-color: #d1e3ff;">
                     <div class="d-flex justify-content-center gap-5">
                         <img src="images/p3.jpeg" class="rounded-circle">
                         <i class="fas fa-arrow-right fa-3x mt-lg-5"></i>
@@ -56,12 +57,11 @@
                     </div>
                 </div>
             </div>
-
-            <br><br>
-
+            <br>
+            <br>
             <div class="d-flex justify-content-evenly">
-                <div class="card p-3" style="width: 30rem; background-color: #d1e3ff;">
-                    Ini adalah contoh Sampah yang dapat di daur ulang : <br>
+                <div class="card p-3" style="width: 34rem; background-color: #d1e3ff;">
+                    <p>Ini adalah contoh Sampah yang dapat di daur ulang:</p>
                     <ul>
                         <li>Sisa makanan seperti kulit buah, sayuran, daging, tulang</li>
                         <li>Daun kering, rumput, dan ranting di pekarangan rumah</li>
@@ -71,8 +71,8 @@
                         <li>Bahan organik lainnya seperti kulit telur, serbuk gergaji, dan jerami</li>
                     </ul>
                 </div>
-                <div class="card p-3" style="width:30rem; background-color: #d1e3ff;  ">
-                    Tentu saja Produk ini memiliki keuntungan bagi kita semua seperti : <br>
+                <div class="card p-3" style="width:34rem; background-color: #d1e3ff;">
+                    <p>Tentu saja Produk ini memiliki keuntungan bagi kita semua, seperti:</p>
                     <ul>
                         <li>Mengurangi limbah</li>
                         <li>Mengurangi emisi gas rumah kaca</li>
@@ -81,23 +81,14 @@
                     </ul>
                 </div>
             </div>
-
-            <center>
-                <br><br><br>
-                <a href="pemanggilan.html" class="btn btn-dark text-white">
-                    Panggil Petugas
-                </a>
-            </center>
+            <br>
+            <br>
+            <br>
+            <div style="display: flex; justify-content: center;">
+                <a href="pemanggilan.html" class="btn btn-dark text-white rounded-4">Panggil Petugas</a>
+            </div>
         </div>
-
-
-
         <br><br><br>
-
-
-
-        <br><br><br><br><br>
-
     </main>
 
 
