@@ -30,24 +30,22 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        //menambahkan atribut alamat pada registrasi
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
-            'alamat' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        //menyamakan dengan yang atas
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'alamat' => $request->alamat,
             'password' => Hash::make($request->password),
         ]);
 
         event(new Registered($user));
 
-        return redirect('login');
+        Auth::login($user);
+
+        return redirect(RouteServiceProvider::HOME);
     }
 }
