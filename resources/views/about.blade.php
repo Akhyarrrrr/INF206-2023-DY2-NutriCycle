@@ -24,14 +24,16 @@
     </nav>
   </header>
 
-    <main>
-    <br><br><br>
-
-    <center>
-
+  <main>
+    <br>
+    <br>
+    <br>
+    <div style="text-align: center;">
       <h1 class="text-white">Kenapa sih harus NutriCycle?</h1>
-      <br><br>
-
+      <br>
+      <br>
+      <br>
+      <br>
       <div class="row justify-content-between mx-5 p-3 rounded-pill mb-5" style="background-color: #60A5FA;">
         <div class="col">
           <span
@@ -55,24 +57,17 @@
           <h3>Lingkungan Bersih</h3>
         </div>
       </div>
-
-      <br><br><br>
-
+      <br>
+      <br>
       <a href="#" onclick="history.back()">
         <button class="btn bg-white text-dark btn-logout">
           <i class="fas fa-arrow-left"></i> Back
         </button>
       </a>
-
-    </center>
-    <br><br><br>
-
-
-
-    <br><br><br>
-
+    </div>
+    <br>
+    <br>
   </main>
-
 
   <div style="background-color:white;" class="text-center pt-3">
     <p>Copyright 2023 &copy; NutriCycle</p>
@@ -81,8 +76,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>
