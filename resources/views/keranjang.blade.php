@@ -12,7 +12,7 @@
 </head>
 
 <body>
-
+    <!-- ini merupakan main dari file keranjang -->
     <main>
       <!-- ini merupakan bagian navbar -->
         <header>
