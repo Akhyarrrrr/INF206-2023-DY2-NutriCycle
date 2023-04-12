@@ -39,7 +39,7 @@
             </div>
         </nav>
     </header>
-
+    <!-- ini merupakan bagian main dari file product -->
     <main>
         <br>
         <br>
