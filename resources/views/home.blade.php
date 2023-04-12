@@ -36,7 +36,9 @@
     </header>
 
     <main>
-        <br><br><br>
+        <br>
+        <br>
+        <br>
         <div style="text-align: center;">
             <h1 style="font-size:4.5rem;color:white;">
                 Welcome to NutriCycle
@@ -73,8 +75,14 @@
                 </div>
             </div>
         </div>
-        <br><br><br><br>
-        <br><br><br><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </main>
 
     <footer class="bg-white text-center pt-3">
