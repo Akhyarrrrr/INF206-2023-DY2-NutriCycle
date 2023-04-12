@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <!--ini merupakan navbar-->
         <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
             <div class="container-fluid">
                 <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
