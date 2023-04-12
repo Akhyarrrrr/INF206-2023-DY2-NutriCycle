@@ -35,110 +35,90 @@
       </div>
     </nav>
   </header>
-  
-  <main>
-    <br><br><br><br>
 
+   <main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="container">
-
-      <div class="row mx-auto justify-content-center">
-
-        <div class="col mx-auto">
-          <div class="card" style="width: 25rem;">
-            <div class="card-body">
-              <div class="d-flex justify-content-center mb-3">
-                <img src="images/p1.jpeg">
-              </div>
-              <h5 class="card-title">Pakan Ternak</h5>
-              <p class="text-danger">Rp50.000</p>
-              <div class="row mb-3">
-                <div class="col" style="border-right: 1px solid black;">
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star-half-alt text-warning"></i>
-                  4.8
+      <div class="mx-auto justify-content-center">
+        <div class="d-flex justify-content-center gap-5">
+          <div>
+            <div class="card" style="width: 25rem;">
+              <div class="card-body">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="images/p1.jpeg" style="width: 200px;">
                 </div>
-                <div class="col">
-                  5 Terjual &nbsp; <i class="far fa-star"></i>
+                <h5 class="card-title">Pakan Ternak</h5>
+                <p class="text-danger">Rp50.000</p>
+                <div class="row mb-3">
+                  <div class="col" style="border-right: 1px solid black;">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>4.8
+                  </div>
+                  <div class="col">5 Terjual &nbsp; <i class="far fa-star"></i>
+                  </div>
                 </div>
-              </div>
-
-              <div class="row">
-                <div class="col" style="border-right: 1px solid black;">
-                  <a href="" class="btn">
-                    <i class="far fa-2x fa-comments"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="keranjang.html" class="btn">
-                    <i class="fas fa-2x fa-cart-plus"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black;">
+                    <a href="" class="btn"><i class="far fa-2x fa-comments"></i></a>
+                  </div>
+                  <div class="col">
+                    <a href="keranjang.html" class="btn"><i class="fas fa-2x fa-cart-plus"></i></a>
+                  </div>
+                  <div class="col">
+                    <a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                  </div>
                 </div>
               </div>
-
-
             </div>
           </div>
-        </div>
 
-        <div class="col">
-          <div class="card" style="width: 25rem;">
-            <div class="card-body">
-              <div class="d-flex justify-content-center mb-3">
-                <img src="images/p2.jpeg" alt="">
-              </div>
-              <h5 class="card-title">Pupuk Organik</h5>
-              <p class="text-danger">Rp50.000</p>
-              <div class="row mb-3">
-                <div class="col" style="border-right: 1px solid black;">
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star text-warning"></i>
-                  <i class="fas fa-star-half-alt text-warning"></i>
-                  4.8
+          <div>
+            <div class="card" style="width: 25rem;">
+              <div class="card-body">
+                <div class="d-flex justify-content-center mb-3">
+                  <img src="images/p2.jpeg" style="width: 200px;">
                 </div>
-                <div class="col">
-                  5 Terjual &nbsp; <i class="far fa-star"></i>
+                <h5 class="card-title">Pupuk Organik</h5>
+                <p class="text-danger">Rp50.000</p>
+                <div class="row mb-3">
+                  <div class="col" style="border-right: 1px solid black;">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>4.8
+                  </div>
+                  <div class="col">5 Terjual &nbsp; <i class="far fa-star"></i></div>
                 </div>
-              </div>
-
-              <div class="row">
-                <div class="col" style="border-right: 1px solid black;">
-                  <a href="" class="btn">
-                    <i class="far fa-2x fa-comments"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="keranjang.html" class="btn">
-                    <i class="fas fa-2x fa-cart-plus"></i>
-                  </a>
-                </div>
-                <div class="col">
-                  <a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black;">
+                    <a href="" class="btn"><i class="far fa-2x fa-comments"></i></a>
+                  </div>
+                  <div class="col">
+                    <a href="keranjang.html" class="btn"><i class="fas fa-2x fa-cart-plus"></i></a>
+                  </div>
+                  <div class="col"><a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                  </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <br><br><br>
-
-
-
-    <br><br><br><br><br>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </main>
-
 
   <div style="background-color:white;" class="text-center pt-3">
     <p>Copyright 2023 &copy; NutriCycle</p>
