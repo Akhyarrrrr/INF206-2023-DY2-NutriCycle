@@ -41,7 +41,7 @@
         <br>
         <div style="text-align: center;">
             <h1 style="font-size:4.5rem;color:white;">
-                Welcome to NutriCycle
+
             </h1>
             <br>
             <p class="text-white">
