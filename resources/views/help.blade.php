@@ -25,8 +25,9 @@
       </nav>
     </header>
 
-    <br><br><br>
-
+    <br>
+    <br>
+    <br>
     <center>
       <div style="background-color: #60A5FA;padding-top: 30px;padding-bottom: 30px;" class="text-white mb-5">
         <h2>Hai, ada yang bisa kami bantu?</h2>
@@ -36,9 +37,9 @@
           style="background-color: #60A5FA;color: black;position: relative;bottom: 35px;left: 268px;"></i>
       </div>
     </center>
-
-    <br><br><br>
-
+    <br>
+    <br>
+    <br>
     <div class="container">
       <h2 class="text-white">FAQ</h2>
       <div class="accordion" id="accordionExample">
@@ -77,19 +78,17 @@
         </div>
       </div>
     </div>
-
-    <br><br><br>
-
-    <center>
-      <a href="#" onclick="history.back()">
-        <button class="btn bg-white text-dark btn-logout">
-          <i class="fas fa-arrow-left"></i> Back
-        </button>
+    <br>
+    <br>
+    <br>
+    <div class="container text-center">
+      <a href="#" onclick="history.back()" class="btn bg-white text-dark btn-logout">
+        <i class="fas fa-arrow-left"></i> Back
       </a>
-    </center>
-
-    <br><br><br>
-
+    </div>
+    <br>
+    <br>
+    <br>
   </main>
 
   <div style="background-color:white;" class="text-center pt-3">
