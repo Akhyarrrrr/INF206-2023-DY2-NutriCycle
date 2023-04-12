@@ -12,10 +12,8 @@
 </head>
 
 <body>
-
-  <main>
-
-    <div class="navbar navbar-expand-lg" style="background-color: #13192B;">
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
       <div class="container-fluid">
         <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
           <img src="images/logo.png" alt="Logo NutriCycle" width="40">NutriCycle
@@ -35,8 +33,10 @@
           </ul>
         </li>
       </div>
-    </div>
-
+    </nav>
+  </header>
+  
+  <main>
     <br><br><br><br>
 
     <div class="container">
