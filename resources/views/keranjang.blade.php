@@ -114,6 +114,7 @@
         <br>
       </main>
 
+      <!-- ini merupakan bagian footer -->
       <footer style="background-color:white;" class="text-center pt-3">
         <p>Copyright 2023 &copy; NutriCycle</p>
       </footer>
