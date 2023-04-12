@@ -40,25 +40,23 @@
     </header>
 
     <main>
-        <br><br><br><br>
-
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="d-flex justify-content-center">
             <div class="card px-3" style="background: #60A5FA; height:550px; width: 400px;">
+                <br>
                 <h1 class="text-center fw-bold">Schedule</h1>
                 <i class="fas fa-shipping-fast text-center fa-3x"></i>
                 <br>
-                <center>
-                    <h5>Tentukan jadwal penjemputan</h5>
-                </center>
-                <br><br>
-
+                <h5 class="text-center">Tentukan jadwal penjemputan</h5>
+                <br>
                 <div class="mb-3">
                     <input type="date" class="form-control px-3">
                 </div>
-
                 <br>
-
-                <div class="mb-3 d-flex justify-content-center">
+                <div class="mb-3 d-flex justify-content-center ">
                     <select class="form-control w-25">
                         <option value="" hidden>Pilih Jam</option>
                         <option value="">08.00</option>
@@ -66,24 +64,21 @@
                         <option value="">17.00</option>
                     </select>
                 </div>
-
-                <br><br><br><br>
-
-                <center>
-                    <button class="btn btn-dark text-white rounded-pill w-25 mb-5">
+                <br>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-dark text-white rounded-pill w-25">
                         Call
                     </button>
-                </center>
+                </div>
             </div>
         </div>
-
-
-        <br><br><br>
-
-        <br><br><br><br><br>
-
+        <br>
+        <br>
+        <br>
+        <br>
     </main>
-
 
     <div style="background-color:white;" class="text-center pt-3">
         <p>Copyright 2023 &copy; NutriCycle</p>
