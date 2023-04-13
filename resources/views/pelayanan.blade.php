@@ -27,8 +27,10 @@
                 <li class="nav-item dropdown" style="margin-right:30px;">
                     <div style="position: relative; bottom:10px;" class="nav-link dropdown-toggle" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle fa-2x me-2 text-white"></i>
-                        <span class="text-white" style="position: relative;bottom: 5px;">Hi, User</span>
+                        <p class="fas fa-user-circle fa-2x me-2 text-white"></p>
+                        <span class="text-white" style="position: relative;bottom: 5px;">
+                            Hi, {{ Auth::user()->name }}
+                        </span>
                     </div>
                     <!-- Option pada Navbar -->
                     <ul class="dropdown-menu">
@@ -37,7 +39,17 @@
                         </li>
                         <li><a class="dropdown-item" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
                         </li>
-                        <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                        <li><a class="dropdown-item" href="index.html">
+                        <li><a class="dropdown-item" href="index"><i></i>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <div href="route('logout')"
+                                        onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        {{ __('Log Out') }}
+                                    </div>
+                                </form>
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -95,9 +107,11 @@
             <br>
             <br>
             <!-- Button untuk menuju halaman pemanggilan petugas-->
-            <div style="display: flex; justify-content: center;">
-                <a href="pemanggilan.html" class="btn btn-dark text-white rounded-4">Panggil Petugas</a>
-            </div>
+            <center>
+                <a href="pemanggilan" class="btn btn-dark text-white rounded-4">
+                    <i class="fas fa-bell"></i> Panggil Petugas
+                </a>
+            </center>
         </div>
         <br><br><br>
     </main>
