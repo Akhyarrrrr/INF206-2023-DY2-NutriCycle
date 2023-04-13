@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!-- Menampilkan header halaman -->
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
             <div class="container-fluid">
@@ -54,6 +55,7 @@
         <br>
     </main>
 
+    <!-- Menampilkan footer halaman -->
     <footer class="bg-white text-center pt-3">
         <p> Copyright 2023 &copy; NutriCycle</p>
     </footer>
