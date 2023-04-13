@@ -34,7 +34,7 @@
         <br>
         <br>
         <br>
-        <div style="text-align: center;">
+        <center>
             <h1 class="text-white">Kenapa sih harus NutriCycle?</h1>
             <br>
             <br>
@@ -49,20 +49,20 @@
                     </span>
                     <h3>Simple</h3>
                 </div>
+                <!-- Menampilkan Keunggulan kedua -->
                 <div class="col">
                     <span
                         style="display: inline-block; height: 200px; width: 200px; background-color: white; border-radius: 50%; overflow: hidden;">
                         <img src="images/about-2.png" alt="" style="height: 85%; width: 85%;">
                     </span>
-                    <!-- Menampilkan Keunggulan kedua -->
                     <h3>Pakan Berkualitas</h3>
                 </div>
+                <!-- Menampilkan Keunggulan ketiga -->
                 <div class="col">
                     <span
                         style="display: inline-block; height: 200px; width: 200px; background-color: white; border-radius: 50%; overflow: hidden;">
                         <img src="images/about-3.png" alt="" style="height: 100%; width: 90%;">
                     </span>
-                    <!-- Menampilkan Keunggulan ketiga -->
                     <h3>Lingkungan Bersih</h3>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                     <i class="fas fa-arrow-left"></i> Back
                 </button>
             </a>
-        </div>
+        </center>
         <br>
         <br>
     </main>
