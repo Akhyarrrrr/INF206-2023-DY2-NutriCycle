@@ -16,7 +16,7 @@
                         {{ __('NutriCycle') }}
                     </x-nav-link>
                 </div>
-            </div>
+            </div> 
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
