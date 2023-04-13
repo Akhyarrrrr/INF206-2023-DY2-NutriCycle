@@ -95,9 +95,11 @@
             <br>
             <br>
             <!-- Button untuk menuju halaman pemanggilan petugas-->
-            <div style="display: flex; justify-content: center;">
-                <a href="pemanggilan.html" class="btn btn-dark text-white rounded-4">Panggil Petugas</a>
-            </div>
+            <center>
+                <a href="pemanggilan" class="btn btn-dark text-white rounded-4">
+                    <i class="fas fa-bell"></i> Panggil Petugas
+                </a>
+            </center>
         </div>
         <br><br><br>
     </main>
