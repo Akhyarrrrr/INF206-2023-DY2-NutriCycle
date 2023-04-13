@@ -59,7 +59,7 @@ Route::get('/keranjang', function () {
 Route::get('/about', function () {
     return view('about');
 });
-
+// untuk menampilkan view help
 Route::get('/help', function () {
     return view('help');
 });
