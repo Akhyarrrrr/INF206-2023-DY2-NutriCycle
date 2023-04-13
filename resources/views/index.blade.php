@@ -9,7 +9,7 @@
     <!-- Memuat file CSS dari Bootstrap untuk membuat halaman responsif -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets\css\style.css">
     <!-- Memuat fontawesome untuk ikon -->
     <script src="https://kit.fontawesome.com/348c676099.js" crossorigin="anonymous"></script>
 </head>
@@ -49,9 +49,11 @@
             </h2>
             <br>
             <br>
-            <a href="/register" class="btn btn-dark text-white rounded-4">
-                <i class="fas fa-arrow-right"></i> Get Started
-            </a>
+            <center>
+                <a href="/register" class="btn btn-dark text-white rounded-4 text-center">
+                    <i class="fas fa-arrow-right"></i> Get Started
+                </a>
+            </center>
         </section>
         <br>
         <br>
