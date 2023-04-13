@@ -66,6 +66,7 @@ Route::get('/help', function () {
 
 require __DIR__ . '/auth.php';
 
+// Di letakkan di bawah require karena di akses di luar login
 Route::get('/', function () {
     return view('index');
 });
