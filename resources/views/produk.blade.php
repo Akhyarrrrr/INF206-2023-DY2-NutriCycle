@@ -51,11 +51,11 @@
                                         <a href="" class="btn"><i class="far fa-2x fa-comments"></i></a>
                                     </div>
                                     <div class="col">
-                                        <a href="keranjang.html" class="btn"><i
+                                        <a href="/keranjang" class="btn"><i
                                                 class="fas fa-2x fa-cart-plus"></i></a>
                                     </div>
                                     <div class="col">
-                                        <a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                                        <a href="/keranjang" class="btn btn-primary">Beli Sekarang</a>
                                     </div>
                                 </div>
                             </div>
