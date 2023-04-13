@@ -117,17 +117,15 @@
         <br>
     </main>
 
-    <<<<<<< HEAD <footer style="background-color:white;" class="text-center pt-3">
-        =======
-        <!-- ini merupakan bagian footer -->
-        <footer style="background-color:white;" class="text-center pt-3">
-            >>>>>>> main
-            <p>Copyright 2023 &copy; NutriCycle</p>
-        </footer>
+    <!-- Menampilkan footer halaman -->
+    <footer style="background-color:white;" class="text-center pt-3">
+        <p>Copyright 2023 &copy; NutriCycle</p>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+    <!-- Memuat file JavaScript dari Bootstrap untuk membuat halaman responsif -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
