@@ -16,6 +16,7 @@
 </head>
 
 <body>
+    <!-- Menampilkan header halaman -->
     <header>
         <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
             <div class="container-fluid">
@@ -28,6 +29,8 @@
                         <i class="fas fa-user-circle fa-2x me-2 text-white"></i>
                         <span class="text-white" style="position: relative;bottom: 5px;">Hi, User</span>
                     </div>
+
+                    <!-- Option pada Navbar -->
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href=""><i class="fas fa-user"></i> Profile</a></li>
                         <li><a class="dropdown-item" href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
