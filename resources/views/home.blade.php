@@ -42,20 +42,24 @@
         </nav>
     </header>
 
+    <!-- Menampilkan main halaman-->
     <main>
         <br>
         <br>
         <br>
+        <!-- Menampilkan bagian selamat datang -->
         <div style="text-align: center;">
             <h1 style="font-size:4.5rem;color:white;">
 
             </h1>
             <br>
+            <!-- Perintah untuk memilih opsi -->
             <p class="text-white">
                 Choose the option you want :
             </p>
             <br>
             <div class="row" style="justify-content: center;">
+                <!-- Menampilkan pilihan pelayanan masyarakat -->
                 <div class="col" style="position: relative;left: 200px;">
                     <a href="pelayanan.html" class="text-decoration-none">
                         <span style="display: inline-block; height: 250px; width: 250px; background-color: white; border-radius: 100%; overflow: hidden;padding: 50px;">
@@ -70,6 +74,8 @@
                     <span style="padding: 0 150px 0 150px;border-top: 1px solid white;position: relative;top: 120px;">
                     </span>
                 </div>
+
+                <!-- Menampilkan pilihan pembelian produk -->
                 <div class="col" style="position: relative;right: 200px;">
                     <a href="produk.html" class="text-decoration-none">
                         <span style="display: inline-block; height: 250px; width: 250px; background-color: white; border-radius: 100%; overflow: hidden;padding: 50px;">
