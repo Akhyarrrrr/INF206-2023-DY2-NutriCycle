@@ -44,7 +44,17 @@
                         </li>
                         <li><a class="dropdown-item" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
                         </li>
-                        <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+                        <li><a class="dropdown-item" href="index.html">
+                        <li><a class="dropdown-item" href="index"><i></i>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <div href="route('logout')"
+                                        onclick="event.preventDefault(); this.closest('form').submit();">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        {{ __('Log Out') }}
+                                    </div>
+                                </form>
+                            </a>
                         </li>
                     </ul>
                 </li>
