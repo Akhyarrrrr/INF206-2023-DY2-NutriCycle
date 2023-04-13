@@ -14,7 +14,7 @@
 <body>
     <!-- ini merupakan main dari file keranjang -->
     <main>
-      <!-- ini merupakan bagian navbar -->
+        <!-- ini merupakan bagian navbar -->
         <header>
             <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
                 <div class="container-fluid">
@@ -117,18 +117,17 @@
         <br>
     </main>
 
-<<<<<<< HEAD
-    <footer style="background-color:white;" class="text-center pt-3">
-=======
-      <!-- ini merupakan bagian footer -->
-      <footer style="background-color:white;" class="text-center pt-3">
->>>>>>> main
-        <p>Copyright 2023 &copy; NutriCycle</p>
-    </footer>
+    <<<<<<< HEAD <footer style="background-color:white;" class="text-center pt-3">
+        =======
+        <!-- ini merupakan bagian footer -->
+        <footer style="background-color:white;" class="text-center pt-3">
+            >>>>>>> main
+            <p>Copyright 2023 &copy; NutriCycle</p>
+        </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
