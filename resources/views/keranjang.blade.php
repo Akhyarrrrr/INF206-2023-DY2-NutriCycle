@@ -25,8 +25,10 @@
                     <li class="nav-item dropdown" style="margin-right:30px;">
                         <div style="position: relative; bottom:10px;" class="nav-link dropdown-toggle" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fas fa-user-circle fa-2x me-2 text-white"></i>
-                            <span class="text-white" style="position: relative;bottom: 5px;">Hi, User</span>
+                            <p class="fas fa-user-circle fa-2x me-2 text-white"></p>
+                            <span class="text-white" style="position: relative;bottom: 5px;">
+                                Hi, {{ Auth::user()->name }}
+                            </span>
                         </div>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href=""><i class="fas fa-user"></i> Profile</a></li>
@@ -117,17 +119,15 @@
         <br>
     </main>
 
-    <<<<<<< HEAD <footer style="background-color:white;" class="text-center pt-3">
-        =======
-        <!-- ini merupakan bagian footer -->
-        <footer style="background-color:white;" class="text-center pt-3">
-            >>>>>>> main
-            <p>Copyright 2023 &copy; NutriCycle</p>
-        </footer>
+    <!-- Menampilkan footer halaman -->
+    <footer style="background-color:white;" class="text-center pt-3">
+        <p>Copyright 2023 &copy; NutriCycle</p>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-        </script>
+    <!-- Memuat file JavaScript dari Bootstrap untuk membuat halaman responsif -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
