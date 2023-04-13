@@ -18,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// untuk menampilkan dashboard dan memverifikasi login beserta mengambil nama user
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
