@@ -49,9 +49,11 @@
             </h2>
             <br>
             <br>
-            <a href="/register" class="btn btn-dark text-white rounded-4">
-                <i class="fas fa-arrow-right"></i> Get Started
-            </a>
+            <center>
+                <a href="/register" class="btn btn-dark text-white rounded-4 text-center">
+                    <i class="fas fa-arrow-right"></i> Get Started
+                </a>
+            </center>
         </section>
         <br>
         <br>
