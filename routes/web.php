@@ -28,4 +28,44 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+Route::get('/signup', function () {
+    return view('signup');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/pelayanan', function () {
+    return view('pelayanan');
+});
+
+Route::get('/pemanggilan', function () {
+    return view('pemanggilan');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/keranjang', function () {
+    return view('keranjang');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/help', function () {
+    return view('help');
+});
+
+require __DIR__ . '/auth.php';
+
+Route::get('/', function () {
+    return view('index');
+});
