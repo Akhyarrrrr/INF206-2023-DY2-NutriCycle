@@ -12,8 +12,9 @@
 </head>
 
 <body>
-
+    <!-- ini merupakan main dari file keranjang -->
     <main>
+      <!-- ini merupakan bagian navbar -->
         <header>
           <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
             <div class="container-fluid">
@@ -113,6 +114,7 @@
         <br>
       </main>
 
+      <!-- ini merupakan bagian footer -->
       <footer style="background-color:white;" class="text-center pt-3">
         <p>Copyright 2023 &copy; NutriCycle</p>
       </footer>

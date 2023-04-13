@@ -39,7 +39,7 @@
             </div>
         </nav>
     </header>
-
+    <!-- ini merupakan bagian main dari file product -->
     <main>
         <br>
         <br>
@@ -126,7 +126,7 @@
         <br>
         <br>
     </main>
-
+    <!-- ini merupakan bagian dari footer -->
     <footer style="background-color:white;" class="text-center pt-3">
         <p>Copyright 2023 &copy; NutriCycle</p>
     </footer>
