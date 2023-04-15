@@ -17,11 +17,6 @@
 </head>
 
 <body>
-    <!-- Menampilkan header halaman -->
-    <header>
-      
-    </header>
-
     <!-- Menampilkan main halaman-->
     <main>
         <br>

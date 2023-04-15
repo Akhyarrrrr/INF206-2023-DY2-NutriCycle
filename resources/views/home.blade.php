@@ -38,7 +38,8 @@
 
                     <!-- Option pada Navbar -->
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href=""><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a class="dropdown-item" href="{{ url('/profile') }}">
+                                <i class="fas fa-user"></i><span>Profile</span></a></li>
                         <li><a class="dropdown-item" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
                         </li>
                         <li><a class="dropdown-item" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
