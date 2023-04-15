@@ -13,10 +13,6 @@
 </head>
 
 <body>
-    <!-- ini sebagai navbar -->
-    <header>
-      
-    </header>
     <!-- ini merupakan bagian main dari file product -->
     <main>
         <br>
