@@ -1,5 +1,5 @@
 <x-app-layout>
-   <!-- Ini adalah kode HTML untuk halaman Home NutriCycle -->
+   <!-- Ini adalah kode HTML untuk halaman Dashboard NutriCycle -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,11 +20,6 @@
 </head>
 
 <body>
-    <!-- Menampilkan header halaman -->
-    <header>
-
-    </header>
-
     <!-- Menampilkan main halaman-->
     <main>
         <br>
