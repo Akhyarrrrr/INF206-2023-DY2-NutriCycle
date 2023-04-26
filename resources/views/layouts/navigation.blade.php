@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-gray-900">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -13,10 +13,10 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('NutriCycle') }}
                     </x-nav-link>
                 </div>
-            </div>
+            </div> 
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -36,6 +36,14 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
+                        </x-dropdown-link>
+
+                         <x-dropdown-link : href="{{ url('/about') }}">
+                            {{ __('About us') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link : href="{{ url('/help') }}">
+                            {{ __('HELP') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
