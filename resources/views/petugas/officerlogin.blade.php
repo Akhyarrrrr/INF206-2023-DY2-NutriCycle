@@ -13,16 +13,18 @@
 
 <body>
 
-  <main>
 
-    <div class="navbar navbar-expand-lg" style="background-color: #13192B;">
-      <div class="container-fluid">
-        <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
-          <img src="image/logo.png" alt="Logo NutriCycle" width="40"> NutriCycle
-        </div>
-        <div class="text-white collapse navbar-collapse">Officer Login</div>
-      </div>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
+          <div class="container-fluid">
+            <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
+              <img src="image/logo.png" alt="Logo NutriCycle" width="40"> NutriCycle
+            </div>
+            <div class="text-white collapse navbar-collapse">Landing Page</div>
+          </div>
+        </nav>
+      </header>
+      <main>
 
     <br><br><br>
 
