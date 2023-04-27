@@ -14,7 +14,7 @@
 
 <body>
     <!-- ini merupakan main dari file keranjang -->
-    <main>
+    <main style="background: linear-gradient(to bottom, #0a1022 0%, #17388d 100%) !important;">
         <br>
         <br>
         <br>
@@ -80,9 +80,11 @@
                     </div>
                 </div>
             </div>
+            
             <div style="float:right;width: 25%;" class="bg-danger p-3 text-white">
                 Checkout (1)
             </div>
+            
         </div>
         <br>
         <br>

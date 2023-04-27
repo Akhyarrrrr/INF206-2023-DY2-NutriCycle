@@ -14,7 +14,7 @@
 
 <body>
     <!-- ini merupakan bagian main dari file product -->
-    <main>
+    <main style="background: linear-gradient(to bottom, #0a1022 0%, #17388d 100%) !important;">
         <br>
         <br>
         <br>
