@@ -36,15 +36,17 @@
         </nav>
       </header>
       <main>
-
-    <br><br><br><br>
-
+    <br>
+    <br>
+    <br>
     <div class="container text-white">
       <h3>Officer Name : Adhi hi hi</h3>
       <h3>Officer ID : 1010</h3>
-
-      <br><br><br><br><br>
-
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <table class="table w-100 text-white text-center">
         <tr style="background: #60A5FA;">
           <th>No</th>
@@ -96,10 +98,14 @@
         </tr>
       </table>
     </div>
-    </center>
-
-    <br><br><br><br><br><br><br><br>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   </main>
 
 
