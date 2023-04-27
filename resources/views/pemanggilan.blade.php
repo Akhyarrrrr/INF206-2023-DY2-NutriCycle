@@ -49,6 +49,11 @@
                             Call
                         </button>
                     </div>
+                    <a href="#" onclick="history.back()">
+                <button class="btn bg-white text-dark btn-logout">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+            </a>
                 </div>
             </div>
             <br>
