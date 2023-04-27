@@ -20,7 +20,7 @@
             <br>
             <br>
             <br>
-            <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center flex-col gap-20 items-center">
                 <div class="card px-3" style="background: #60A5FA; height:550px; width: 400px;">
                     <br>
                     <h1 class="text-center fw-bold">Schedule</h1>
@@ -34,17 +34,15 @@
                     </div>
                     <br>
                     <!-- Opsi pilihan jam penjemputan -->
-                    <div class="mb-3 d-flex justify-content-center ">
-                        <select class="form-control w-25">
+                    <div class="mb-3 flex justify-center items-center w-full">
+                        <select class="form-control">
                             <option value="" hidden>Pilih Jam</option>
                             <option value="">08.00</option>
                             <option value="">12.00</option>
                             <option value="">17.00</option>
                         </select>
                     </div>
-                    <br>
-                    <br>
-                    <br>
+                    
                     <!-- Button untuk memanggil Petugas-->
                     <div class="d-flex justify-content-center">
                         <button class="btn btn-dark text-white rounded-pill w-25">

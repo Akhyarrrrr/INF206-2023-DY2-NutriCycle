@@ -1,4 +1,5 @@
 <!-- Ini adalah kode HTML untuk halaman About NutriCycle -->
+<x-app-layout>
 <!doctype html>
 <html lang="en">
 
@@ -16,17 +17,7 @@
 
 <body>
     <!-- Menampilkan header halaman -->
-    <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
-            <div class="container-fluid">
-                <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
-                    <img src="images/logo.png" alt="Logo NutriCycle" width="40">
-                    NutriCycle
-                </div>
-                <div class="text-white collapse navbar-collapse">About</div>
-            </div>
-        </nav>
-    </header>
+   
 
     <!-- Menampilkan main halaman-->
     <main style="background: linear-gradient(to bottom, #0a1022 0%, #17388d 100%) !important;">
@@ -91,3 +82,4 @@
 </body>
 
 </html>
+</x-app-layout>
