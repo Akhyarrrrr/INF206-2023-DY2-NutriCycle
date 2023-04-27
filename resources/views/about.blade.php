@@ -9,8 +9,7 @@
     <!-- Memuat file CSS dari Bootstrap untuk membuat halaman responsif -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <!-- Memuat file CSS custom -->
-    <link rel="stylesheet" href="style.css">
+    
     <!-- Memuat fontawesome untuk ikon -->
     <script src="https://kit.fontawesome.com/348c676099.js" crossorigin="anonymous"></script>
 </head>
@@ -30,11 +29,11 @@
     </header>
 
     <!-- Menampilkan main halaman-->
-    <main>
+    <main style="background: linear-gradient(to bottom, #0a1022 0%, #17388d 100%) !important;">
         <br>
         <br>
         <br>
-        <div style="text-align: center;">
+        <center>
             <h1 class="text-white">Kenapa sih harus NutriCycle?</h1>
             <br>
             <br>
@@ -49,20 +48,20 @@
                     </span>
                     <h3>Simple</h3>
                 </div>
+                <!-- Menampilkan Keunggulan kedua -->
                 <div class="col">
                     <span
                         style="display: inline-block; height: 200px; width: 200px; background-color: white; border-radius: 50%; overflow: hidden;">
                         <img src="images/about-2.png" alt="" style="height: 85%; width: 85%;">
                     </span>
-                    <!-- Menampilkan Keunggulan kedua -->
                     <h3>Pakan Berkualitas</h3>
                 </div>
+                <!-- Menampilkan Keunggulan ketiga -->
                 <div class="col">
                     <span
                         style="display: inline-block; height: 200px; width: 200px; background-color: white; border-radius: 50%; overflow: hidden;">
                         <img src="images/about-3.png" alt="" style="height: 100%; width: 90%;">
                     </span>
-                    <!-- Menampilkan Keunggulan ketiga -->
                     <h3>Lingkungan Bersih</h3>
                 </div>
             </div>
@@ -74,7 +73,7 @@
                     <i class="fas fa-arrow-left"></i> Back
                 </button>
             </a>
-        </div>
+        </center>
         <br>
         <br>
     </main>
