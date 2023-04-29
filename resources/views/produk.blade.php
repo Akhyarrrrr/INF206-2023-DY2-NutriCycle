@@ -1,3 +1,4 @@
+<x-app-layout>
 <!doctype html>
 <html lang="en">
 
@@ -12,47 +13,8 @@
 </head>
 
 <body>
-    <!-- ini sebagai navbar -->
-    <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
-            <div class="container-fluid">
-                <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
-                    <img src="images/logo.png" alt="Logo NutriCycle" width="40">NutriCycle
-                </div>
-                <div class="text-white collapse navbar-collapse">Pembelian Produk</div>
-                <li class="nav-item dropdown" style="margin-right:30px;">
-                    <div style="position: relative; bottom:10px;" class="nav-link dropdown-toggle" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <p class="fas fa-user-circle fa-2x me-2 text-white"></p>
-                        <span class="text-white" style="position: relative;bottom: 5px;">
-                            Hi, {{ Auth::user()->name }}
-                        </span>
-                    </div>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href=""><i class="fas fa-user"></i> Profile</a></li>
-                        <li><a class="dropdown-item" href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
-                        </li>
-                        <li><a class="dropdown-item" href="help.html"><i class="fas fa-question-circle"></i> Help</a>
-                        </li>
-                        <li><a class="dropdown-item" href="index.html">
-                        <li><a class="dropdown-item" href="index"><i></i>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <div href="route('logout')"
-                                        onclick="event.preventDefault(); this.closest('form').submit();">
-                                        <i class="fas fa-sign-out-alt"></i>
-                                        {{ __('Log Out') }}
-                                    </div>
-                                </form>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-        </nav>
-    </header>
     <!-- ini merupakan bagian main dari file product -->
-    <main>
+    <main style="background: linear-gradient(to bottom, #0a1022 0%, #17388d 100%) !important;">
         <br>
         <br>
         <br>
@@ -85,11 +47,11 @@
                                         <a href="" class="btn"><i class="far fa-2x fa-comments"></i></a>
                                     </div>
                                     <div class="col">
-                                        <a href="keranjang.html" class="btn"><i
+                                        <a href="/keranjang" class="btn"><i
                                                 class="fas fa-2x fa-cart-plus"></i></a>
                                     </div>
                                     <div class="col">
-                                        <a href="keranjang.html" class="btn btn-primary">Beli Sekarang</a>
+                                        <a href="/keranjang" class="btn btn-primary">Beli Sekarang</a>
                                     </div>
                                 </div>
                             </div>
@@ -149,3 +111,4 @@
 </body>
 
 </html>
+</x-app-layout>

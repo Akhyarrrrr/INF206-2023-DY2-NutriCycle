@@ -16,15 +16,15 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <div class= "mt-4">
+        <div class="mt-4">
             <x-input-label for="phonenumber" :value="__('phonenumber')" />
-            <x-text-input id="phonenumber" class="block mt-1 w-full" type="text" phonenumber="phonenumber" :value="old('phonenumber')" required autofocus autocomplete="phonenumber" />
+            <x-text-input id="phonenumber" class="block mt-1 w-full" type="text" name="phonenumber" :value="old('phonenumber')" required autofocus autocomplete="phonenumber" />
             <x-input-error :messages="$errors->get('phonenumber')" class="mt-2" />
         </div>
 
-        <div class= "mt-4">
+        <div class="mt-4">
             <x-input-label for="alamat" :value="__('alamat')" />
-            <x-text-input id="alamat" class="block mt-1 w-full" type="text" alamat="alamat" :value="old('alamat')" required autofocus autocomplete="alamat" />
+            <x-text-input id="alamat" class="block mt-1 w-full" type="text" name="alamat" :value="old('alamat')" required autofocus autocomplete="alamat" />
             <x-input-error :messages="$errors->get('alamat')" class="mt-2" />
         </div>
 
@@ -60,5 +60,7 @@
                 {{ __('Register') }}
             </x-primary-button>
         </div>
+        <a href="login" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Back</a>
+
     </form>
 </x-guest-layout>

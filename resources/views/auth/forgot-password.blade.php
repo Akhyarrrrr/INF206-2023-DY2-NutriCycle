@@ -21,5 +21,7 @@
                 {{ __('Email Password Reset Link') }}
             </x-primary-button>
         </div>
+        <a href="login" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ">Back</a>
+
     </form>
 </x-guest-layout>
