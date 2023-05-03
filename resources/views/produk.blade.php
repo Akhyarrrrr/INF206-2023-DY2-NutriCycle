@@ -1,3 +1,4 @@
+<x-app-layout>
 <!-- Ini adalah kode HTML untuk halaman Pembelian Produk NutriCycle -->
 <!doctype html>
 <html lang="en">
@@ -148,3 +149,4 @@
 </body>
 
 </html>
+    </x-app-layout>

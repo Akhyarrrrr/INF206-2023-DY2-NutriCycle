@@ -23,6 +23,7 @@
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
 
+    <!-- email-->
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
@@ -46,6 +47,20 @@
                 </div>
             @endif
         </div>
+
+        <div>
+            <x-input-label for="phonenumber" :value="__('phonenumber')" />
+            <x-text-input id="phonenumber" phonenumber="phonenumber" type="text" class="mt-1 block w-full" :value="old('phonenumber', $user->phonenumber)" required autofocus autocomplete="phonenumber" />
+            <x-input-error class="mt-2" :messages="$errors->get('phonenumber')" />
+        </div>
+
+        <div>
+            <x-input-label for="alamat" :value="__('alamat')" />
+            <x-text-input id="alamat" alamat="alamat" type="text" class="mt-1 block w-full" :value="old('alamat', $user->alamat)" required autofocus autocomplete="alamat" />
+            <x-input-error class="mt-2" :messages="$errors->get('alamat')" />
+        </div>
+
+
 
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
