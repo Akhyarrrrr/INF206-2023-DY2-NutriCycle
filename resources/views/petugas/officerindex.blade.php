@@ -23,27 +23,34 @@
         </nav>
       </header>
       <main>
-
-  <br><br><br>
-
-  <center class="text-white">
-    <h1 style="font-size: 5rem;">Welcome</h1>
     <br>
-    <a href="officerlogin.html" class="text-decoration-none">
-      <img src="image/logo.png">
-    </a>
-    <br><br>
+    <br>
+    <br>
+    <section class="welcome-section">
+      <h1 class="text-white text-center" style="font-size: 5rem;">Welcome</h1><br>
+      <div class="text-center">
+        <a href="officerhome.html">
+          <img src="image/logo.png" alt="Logo NutriCycle">
+        </a>
+        <br>
+        <br>
+        <br>
+      </div>
+      <h2 class="text-white text-center">
+        Ubah Sampah Beranak
+        <br>
+        Menjadi Pakan Ternak
+      </h2>
+    </section>
+    <br>
+    <br>
+    <br>
+  </main>
 
-    <h2>Ubah Sampah Beranak <br>
-      Menjadi Pakan Ternak</h2>
-    <br><br><br>
-  </center>
 
-</main>
-
-<nav style="background-color:white;" class="text-center pt-3">
-  <p>Copyright 2023 &copy; NutriCycle</p>
-</nav>
+  <footer class="bg-white text-center pt-3">
+    <p> Copyright 2023 &copy; NutriCycle</p>
+  </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
