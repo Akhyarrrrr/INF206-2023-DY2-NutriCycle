@@ -98,6 +98,60 @@
                     </div>
                 </div>
             </div>
+            @foreach ($data as $key => $value)
+                <div class="modal fade" id="edit-{{ $value->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Edit Produk</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <form action="{{ route('produk-update') }}" method="POST" enctype="multipart/form-data">
+                                <div class="modal-body">
+                                    @csrf
+                                    <div class="mb-3">
+                                        <label for="nama-produk" class="form-label">Nama Produk</label>
+                                        <input type="text" class="form-control" name="nama" id="nama-produk"
+                                            placeholder="Masukkan Nama Produk" value="{{ $value->nama }}" required>
+                                        <input type="hidden" name="id" value="{{ $value->id }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="gambar-produk" class="form-label">Gambar Produk</label>
+                                        <input type="file" class="form-control" name="gambar"
+                                            id="gambar-produk">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="harga-produk" class="form-label">Harga Produk</label>
+                                        <input type="number" class="form-control" name="harga" id="harga-produk"
+                                            placeholder="Masukkan Harga Produk" value="{{ $value->harga }}" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="harga-promo" class="form-label">Harga Promo</label>
+                                        <input type="number" class="form-control" name="harga_promo"
+                                            id="harga-promo" placeholder="Masukkan Harga Promo"
+                                            value="{{ $value->harga_promo }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="tgl-promo-berakhir" class="form-label">Tanggal Promo
+                                            Berakhir</label>
+                                        <input type="date" class="form-control" name="tanggal_promo_berakhir"
+                                            value="{{ $value->tanggal_promo_berakhir }}" id="tgl-promo-berakhir">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Simpan</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 
 
 
