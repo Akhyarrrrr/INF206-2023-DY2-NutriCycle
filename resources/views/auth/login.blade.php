@@ -36,7 +36,7 @@
 
        <div class="flex items-center  mt-4 ml-2">
             <a class="underline text-sm text-gray-800 hover:text-gray-900  dark:text-gray-400  dark:hover:text-gray-100" href="{{ route('register') }}">
-                {{ __('register') }}
+                {{ __('Register') }}
             </a>
 
             @if (Route::has('password.request'))
