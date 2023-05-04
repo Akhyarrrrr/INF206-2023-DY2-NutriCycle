@@ -51,6 +51,43 @@
                     </tbody>
                 </table>
             </div>
+            @foreach ($data as $key => $value)
+                <div class="modal fade" id="detail-{{ $value->id }}" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Detail Transaksi</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Produk</th>
+                                            <th>Jumlah</th>
+                                            <th>Harga produk</th>
+                                            <th>Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @forelse ($value->detail as $k => $v)
+                                            <tr>
+                                                <td>{{ $k + 1 }}</td>
+                                                <td>{{ $v->produk->nama }}</td>
+                                                <td>{{ $v->jumlah }}</td>
+                                                <td>Rp {{ number_format($v->harga) }}</td>
+                                                <td>Rp {{ number_format($v->harga * $v->jumlah) }}</td>
+                                            </tr>
+
+                                        @empty
+                                            Data Kosong
+                                        @endforelse
+                                    </tbody>
+                                </table>
+                            </div>
 
 
 
