@@ -27,6 +27,28 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        @forelse ($data as $key => $value)
+                            <tr>
+                                <td>{{ $key+1 }}</td>
+                                <td>{{ $value->nama }}</td>
+                                <td><img src="{{ asset('images/' . $value->gambar) }}" alt="Gambar Produk A"
+                                        width="50"></td>
+                                <td>Rp {{ number_format($value->harga) }}</td>
+                                <td>Rp {{ number_format($value->harga_promo) }}</td>
+                                <td>{{ $value->tanggal_promo_berakhir ?? 'tidak ada promo' }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#edit-{{ $value->id }}">Edit</button>
+                                    <a href="{{ route('produk-delete',$value->id) }}" class="btn btn-danger">Hapus</a>
+                                </td>
+                            </tr>
+
+                        @empty
+                            Data Kosong
+                        @endforelse
+                    </tbody>
+                </table>
 
 
 
