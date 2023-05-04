@@ -49,7 +49,32 @@
                         @endforelse
                     </tbody>
                 </table>
+                </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="modal-tambah" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Tambah Produk</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <form action="{{ route('produk-tambah') }}" method="POST" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                @csrf
+                                <div class="mb-3">
+                                    <label for="nama-produk" class="form-label">Nama Produk</label>
+                                    <input type="text" class="form-control" id="nama-produk"
+                                        placeholder="Masukkan Nama Produk" name="nama" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="gambar-produk" class="form-label">Gambar Produk</label>
+                                    <input type="file" class="form-control" name="gambar" id="gambar-produk"
+                                        required>
+                                </div>
+                               
 
 
 
