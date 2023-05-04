@@ -30,7 +30,27 @@
                                 <td>{{ $key + 1 }}</td>
                                 <td>{{ $value->user->name }}</td>
                                 <td>Rp {{ number_format($value->total_harga) }}</td>
-                                <td>{{ $value->tanggal }}</td>
+                                <td>{{ $value->tanggal }}</td> 
+                                <td>
+                                    <button type="button" class="btn btn-warning" data-toggle="modal"
+                                        data-target="#detail-{{ $value->id }}">Detail</button>
+                                </td>
+                                <td>
+                                    @if ($value->status == 0)
+                                        <a href="{{ route('transaksi-selesai', $value->id) }}"
+                                            class="btn btn-primary">Selesaikan</a>
+                                    @else
+                                        <button type="button" class="btn btn-success" disabled>Sukses</button>
+                                    @endif
+                                </td>
+                            </tr>
+
+                        @empty
+                            Data Kosong
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
 
 
 
