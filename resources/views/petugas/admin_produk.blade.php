@@ -74,7 +74,30 @@
                                     <input type="file" class="form-control" name="gambar" id="gambar-produk"
                                         required>
                                 </div>
-                               
+                                <div class="mb-3">
+                                    <label for="harga-produk" class="form-label">Harga Produk</label>
+                                    <input type="number" class="form-control" id="harga-produk"
+                                        placeholder="Masukkan Harga Produk" name="harga" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="harga-promo" class="form-label">Harga Promo</label>
+                                    <input type="number" class="form-control" name="harga_promo" id="harga-promo"
+                                        placeholder="Masukkan Harga Promo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tgl-promo-berakhir" class="form-label">Tanggal Promo Berakhir</label>
+                                    <input type="date" class="form-control" name="tanggal_promo_berakhis"
+                                        id="tgl-promo-berakhir">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
 
 
