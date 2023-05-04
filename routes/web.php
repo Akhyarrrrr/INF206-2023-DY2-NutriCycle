@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/redirects',[HomeController::class,"index"]);
+route::get('/redirects', [HomeController::class, "index"]);
 
 // untuk menampilkan dashboard dan memverifikasi login beserta mengambil nama user
 Route::get('/dashboard', function () {
@@ -56,6 +56,8 @@ Route::get('/pelayanan', function () {
 Route::get('/pemanggilan', function () {
     return view('pemanggilan');
 });
+
+Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
 
 //untuk menampilkan ke arah page produk
 Route::get('/produk', function () {
