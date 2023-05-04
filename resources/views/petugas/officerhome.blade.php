@@ -1,3 +1,4 @@
+<x-app-layout>
 <!doctype html>
 <html lang="en">
 
@@ -14,26 +15,7 @@
 
 <body>
   
-    <header>
-        <nav class="navbar navbar-expand-lg" style="background-color: #13192B;">
-          <div class="container-fluid">
-            <div class="navbar-brand text-white pe-3" style="border-right: 1px solid white;">
-              <img src="image/logo.png" alt="Logo NutriCycle" width="40">NutriCycle
-            </div>
-            <div class="text-white collapse navbar-collapse">Officer Home</div>
-            <li class="nav-item dropdown" style="margin-right:30px;">
-              <div style="position: relative; bottom:10px;" class="nav-link dropdown-toggle" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user-circle fa-2x me-2 text-white"></i>
-                <span class="text-white" style="position: relative;bottom: 5px;">Hi, Admin</span>
-              </div>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="officerindex.html"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
-              </ul>
-            </li>
-          </div>
-        </nav>
-      </header>
+   
       <main>
     <br>
     <br>
@@ -45,7 +27,7 @@
       <br>
       <div class="row" style="justify-content: center;">
         <div class="col" style="position: relative; left: 200px;">
-          <a href="pick-up.html" class="text-decoration-none">
+          <a href="pickup" class="text-decoration-none">
             <span
               style="display: inline-block; height: 250px; width: 250px; background-color: white; border-radius: 100%; overflow: hidden;padding: 50px;">
               <img src="../images/p4.jpeg" alt="" style="height: 100%; width: auto;">
@@ -57,7 +39,7 @@
           <span style="padding: 0 180px 0 180px;border-top: 1px solid white;position: relative;top: 120px;"></span>
         </div>
         <div class="col" style="position: relative; right: 200px;">
-          <a href="order.html" class="text-decoration-none">
+          <a href="order" class="text-decoration-none">
             <span
               style="display: inline-block; height: 250px; width: 250px; background-color: white; border-radius: 100%; overflow: hidden;padding: 50px;">
               <img src="../images/p5.jpeg" alt="" style="height: 100%; width: auto;">
@@ -87,3 +69,4 @@
 </body>
 
 </html>
+</x-app-layout>
