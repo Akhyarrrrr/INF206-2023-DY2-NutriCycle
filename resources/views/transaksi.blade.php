@@ -23,7 +23,14 @@
                             <th>Detail Produk</th>
                             <th>Aksi</th>
                         </tr>
-                    </thead>
+                    </thead> 
+                    <tbody>
+                        @forelse ($data as $key => $value)
+                            <tr>
+                                <td>{{ $key + 1 }}</td>
+                                <td>{{ $value->user->name }}</td>
+                                <td>Rp {{ number_format($value->total_harga) }}</td>
+                                <td>{{ $value->tanggal }}</td>
 
 
 
