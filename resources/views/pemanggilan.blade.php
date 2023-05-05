@@ -24,35 +24,39 @@
             <br>
             <div class="d-flex justify-content-center flex-col gap-20 items-center">
                 <div class="card px-3" style="background: #60A5FA; height:550px; width: 400px;">
-                    <br>
-                    <h1 class="text-center fw-bold">Schedule</h1>
-                    <i class="fas fa-shipping-fast text-center fa-3x"></i>
-                    <br>
-                    <h5 class="text-center">Tentukan jadwal penjemputan</h5>
-                    <br>
-                    <!-- Opsi pilihan tanggal-bulan-tahun -->
-                    <div class="mb-3">
-                        <input type="date" class="form-control px-3">
-                    </div>
-                    <br>
-                    <!-- Opsi pilihan jam penjemputan -->
-                    <div class="mb-3 d-flex justify-content-center ">
-                        <select class="form-control w-25">
-                            <option value="" hidden>Jam</option>
-                            <option value="">08.00</option>
-                            <option value="">12.00</option>
-                            <option value="">17.00</option>
-                        </select>
-                    </div>
-                    <br>
-                    <br>
+                    <form action="{{ route('pemanggilan_tambah') }}" method="post">
+                        @csrf
+                        <br>
+                        <h1 class="text-center fw-bold">Schedule</h1>
+                        <i class="fas fa-shipping-fast text-center fa-3x"></i>
+                        <br>
+                        <h5 class="text-center">Tentukan jadwal penjemputan</h5>
+                        <br>
+                        <!-- Opsi pilihan tanggal-bulan-tahun -->
+                        <div class="mb-3">
+                            <input type="date" class="form-control px-3" name="tanggal" required>
+                        </div>
+                        <br>
+                        <!-- Opsi pilihan jam penjemputan -->
+                        <div class="mb-3 d-flex justify-content-center ">
+                            <select class="form-control w-25" name="jam" required>
+                                <option value="" hidden>Jam</option>
+                                <option value="08.00">08.00</option>
+                                <option value="12.00">12.00</option>
+                                <option value="17.00">17.00</option>
+                            </select>
+                        </div>
+                        <br>
+                        <br>
 
-                    <!-- Button untuk memanggil Petugas-->
-                    <div class="d-flex justify-content-center">
-                        <button class="btn btn-dark text-white rounded-pill w-25" onclick="callOffice()">
-                            Call
-                        </button>
-                    </div>
+                        <!-- Button untuk memanggil Petugas-->
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-dark text-white rounded-pill w-25"
+                                onclick="callOffice()">
+                                Call
+                            </button>
+                        </div>
+                    </form>
                 </div>
                 <!-- Button untuk kembali kehalaman sebelumnya -->
                 <a href="#" onclick="history.back()">
@@ -76,8 +80,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
         </script>
-        <script>
-            function callOffice() {
+        @if (session('success'))
+            <script>
                 // lakukan aksi untuk memanggil petugas
                 Swal.fire({
                     icon: 'success',
@@ -85,8 +89,8 @@
                     showConfirmButton: false,
                     timer: 2000
                 })
-            }
-        </script>
+            </script>
+        @endif
     </body>
 
     </html>
