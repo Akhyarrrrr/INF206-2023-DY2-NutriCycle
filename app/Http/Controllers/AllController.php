@@ -189,4 +189,20 @@ class AllController extends Controller
             "data" => Pemanggilan::get()
         ]);
     }
+
+    public function transaksi_selesai($id)
+    {
+        Transaksi::find($id)->update([
+            "status" => 1
+        ]);
+
+        return back()->with('success', 'Data telah dirubah');
+    }
+
+    public function transaksi()
+    {
+        return view('transaksi', [
+            "data" => Transaksi::get()
+        ]);
+    }
 }
