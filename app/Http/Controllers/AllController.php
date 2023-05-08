@@ -182,4 +182,11 @@ class AllController extends Controller
 
         return back()->with('success', 'Data telah dirubah');
     }
+
+    public function admin_pemanggilan()
+    {
+        return view('admin_pemanggilan', [
+            "data" => Pemanggilan::get()
+        ]);
+    }
 }
