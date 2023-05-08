@@ -157,7 +157,12 @@ class AllController extends Controller
     
             return redirect()->route('produk-read')->with('success', 'Produk berhasil diupdate.');
         }
-
+        public function produk_delete($id)
+        {
+            Produk::find($id)->delete();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil dihapus.');
+        }
 
         
     }
