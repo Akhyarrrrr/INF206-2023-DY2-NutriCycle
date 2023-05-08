@@ -64,6 +64,14 @@ class AllController extends Controller
 
         return back()->with('success', 'Cart berhasil diupdate');
     }
+    public function checkout(Request $request)
+    {
+        // Ambil data user yang sedang login
+        $user = Auth::user();
 
-
+        // Buat transaksi baru 
+        $transaksi = new Transaksi();
+        $transaksi->user_id = $user->id;
+        $transaksi->total_harga = 0; // Masukkan total harga belanjaan
+        $transaksi->save();
 }
