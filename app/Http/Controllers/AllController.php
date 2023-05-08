@@ -69,9 +69,34 @@ class AllController extends Controller
         // Ambil data user yang sedang login
         $user = Auth::user();
 
-        // Buat transaksi baru 
+        // Buat transaksi baru (ayu)
         $transaksi = new Transaksi();
         $transaksi->user_id = $user->id;
         $transaksi->total_harga = 0; // Masukkan total harga belanjaan
         $transaksi->save();
-}
+
+        // Looping data cart
+        $cartIds = $request->input('cart');
+        $cartItems = Cart::whereIn('id', $cartIds)->get();
+        foreach ($cartItems as $cart) {
+            // Buat detail transaksi baru
+            $detailTransaksi = new TransaksiDetail();
+            $detailTransaksi->transaksi_id = $transaksi->id;
+            $detailTransaksi->produk_id = $cart->produk_id;
+            $detailTransaksi->jumlah = $cart->jumlah;
+            if ($cart->produk->harga_promo != 0) {
+                $detailTransaksi->harga = $cart->produk->harga_promo;
+            } else {
+                $detailTransaksi->harga = $cart->produk->harga;
+            }
+            $detailTransaksi->save();
+
+            // Tambahkan harga produk ke total harga transaksi
+            $transaksi->total_harga += $detailTransaksi->harga * $cart->jumlah;
+
+            // Hapus data cart
+            $cart->delete();
+        }
+        }
+
+        
