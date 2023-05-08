@@ -131,7 +131,35 @@ class AllController extends Controller
     
             return redirect()->route('produk-read')->with('success', 'Produk berhasil ditambahkan.');
         }
+        public function produk_update(Request $request)
+        {
+            $produk = Produk::findOrFail($request->id);
+    
+            $produk->nama = $request->nama;
+            $produk->harga = $request->harga;
+    
+            if ($request->hasFile('gambar')) {
+                $gambar = $request->file('gambar');
+                $filename = time() . '.' . $gambar->getClientOriginalExtension();
+                $gambar->move(public_path('images'), $filename);
+                $produk->gambar = $filename;
+            }
+    
+            if ($request->harga_promo != 0) {
+                $produk->harga_promo = $request->harga_promo;
+                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+            } else {
+                $produk->harga_promo = 0;
+                $produk->tanggal_promo_berakhir = null;
+            }
+    
+            $produk->save();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil diupdate.');
+        }
 
+
+        
     }
     
 
