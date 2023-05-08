@@ -69,7 +69,7 @@ class AllController extends Controller
         // Ambil data user yang sedang login
         $user = Auth::user();
 
-        // Buat transaksi baru (ayu)
+        // Buat transaksi baru 
         $transaksi = new Transaksi();
         $transaksi->user_id = $user->id;
         $transaksi->total_harga = 0; // Masukkan total harga belanjaan
@@ -97,6 +97,75 @@ class AllController extends Controller
             // Hapus data cart
             $cart->delete();
         }
-    }
-}
+        // Update total harga transaksi
+        $transaksi->save();
 
+        // Redirect ke halaman sukses checkout
+        return redirect('/produk')->with('success', 'Transaksi Sedang Di Proses');
+        }
+        public function admin_produk()
+        {
+            return view('admin_produk', [
+                "data" => Produk::get()
+            ]);
+        }
+        public function produk_tambah(Request $request)
+        {
+            $produk = new Produk();
+            $produk->nama = $request->nama;
+            $produk->harga = $request->harga;
+    
+            if ($request->hasFile('gambar')) {
+                $gambar = $request->file('gambar');
+                $filename = time() . '.' . $gambar->getClientOriginalExtension();
+                $gambar->move(public_path('images'), $filename);
+                $produk->gambar = $filename;
+            }
+    
+            if ($request->promo) {
+                $produk->harga_promo = $request->promo;
+                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+            }
+    
+            $produk->save();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil ditambahkan.');
+        }
+        public function produk_update(Request $request)
+        {
+            $produk = Produk::findOrFail($request->id);
+    
+            $produk->nama = $request->nama;
+            $produk->harga = $request->harga;
+    
+            if ($request->hasFile('gambar')) {
+                $gambar = $request->file('gambar');
+                $filename = time() . '.' . $gambar->getClientOriginalExtension();
+                $gambar->move(public_path('images'), $filename);
+                $produk->gambar = $filename;
+            }
+    
+            if ($request->harga_promo != 0) {
+                $produk->harga_promo = $request->harga_promo;
+                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+            } else {
+                $produk->harga_promo = 0;
+                $produk->tanggal_promo_berakhir = null;
+            }
+    
+            $produk->save();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil diupdate.');
+        }
+        public function produk_delete($id)
+        {
+            Produk::find($id)->delete();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil dihapus.');
+        }
+
+        
+    }
+    
+
+        
