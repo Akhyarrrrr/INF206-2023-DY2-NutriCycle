@@ -27,7 +27,23 @@ class AllController extends Controller
             'data' => Produk::get()
         ]);
     }
+    public function add_cart($id)
+    {
+        $cart = Cart::firstOrCreate([
+            'user_id' => Auth::user()->id,
+            'produk_id' => $id,
+        ]);
+
+        $cart->increment('jumlah');
+
+        return back()->with('success', 'Produk berhasil ditambahkan ke keranjang.');
+    }
+    public function keranjang()
+    {
+        return view('keranjang', [
+            'data' => Cart::where('user_id', Auth::user()->id)->get()
+        ]);
+    }
 
 
-    
 }
