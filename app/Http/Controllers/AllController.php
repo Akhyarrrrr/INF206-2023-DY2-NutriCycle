@@ -44,6 +44,26 @@ class AllController extends Controller
             'data' => Cart::where('user_id', Auth::user()->id)->get()
         ]);
     }
+    public function update_cart($id, $tipe)
+    {
+        $cart = Cart::findOrFail($id);
+
+        if ($tipe == -1) {
+            if ($cart->jumlah == 1) {
+                $cart->delete();
+            } else {
+                $cart->update([
+                    'jumlah' => $cart->jumlah - 1
+                ]);
+            }
+        } elseif ($tipe == 1) {
+            $cart->update([
+                'jumlah' => $cart->jumlah + 1
+            ]);
+        }
+
+        return back()->with('success', 'Cart berhasil diupdate');
+    }
 
 
 }
