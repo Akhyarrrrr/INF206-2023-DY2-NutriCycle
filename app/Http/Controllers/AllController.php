@@ -14,3 +14,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Stringable;
+
+
+class AllController extends Controller
+{
+    /**
+     * Display the user's profile form.
+     */
+    public function Produk()
+    {
+        return view('produk', [
+            'data' => Produk::get()
+        ]);
+    }
+
+
+    
+}
