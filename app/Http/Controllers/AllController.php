@@ -69,7 +69,7 @@ class AllController extends Controller
         // Ambil data user yang sedang login
         $user = Auth::user();
 
-        // Buat transaksi baru (ayu)
+        // Buat transaksi baru 
         $transaksi = new Transaksi();
         $transaksi->user_id = $user->id;
         $transaksi->total_harga = 0; // Masukkan total harga belanjaan
@@ -97,6 +97,13 @@ class AllController extends Controller
             // Hapus data cart
             $cart->delete();
         }
-    }
-}
+        // Update total harga transaksi
+        $transaksi->save();
 
+        // Redirect ke halaman sukses checkout
+        return redirect('/produk')->with('success', 'Transaksi Sedang Di Proses');
+        }
+    }
+    
+
+        
