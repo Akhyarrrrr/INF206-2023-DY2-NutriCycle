@@ -97,6 +97,6 @@ class AllController extends Controller
             // Hapus data cart
             $cart->delete();
         }
-        }
+    }
+}
 
-        
