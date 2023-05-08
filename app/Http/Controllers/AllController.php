@@ -103,6 +103,35 @@ class AllController extends Controller
         // Redirect ke halaman sukses checkout
         return redirect('/produk')->with('success', 'Transaksi Sedang Di Proses');
         }
+        public function admin_produk()
+        {
+            return view('admin_produk', [
+                "data" => Produk::get()
+            ]);
+        }
+        public function produk_tambah(Request $request)
+        {
+            $produk = new Produk();
+            $produk->nama = $request->nama;
+            $produk->harga = $request->harga;
+    
+            if ($request->hasFile('gambar')) {
+                $gambar = $request->file('gambar');
+                $filename = time() . '.' . $gambar->getClientOriginalExtension();
+                $gambar->move(public_path('images'), $filename);
+                $produk->gambar = $filename;
+            }
+    
+            if ($request->promo) {
+                $produk->harga_promo = $request->promo;
+                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+            }
+    
+            $produk->save();
+    
+            return redirect()->route('produk-read')->with('success', 'Produk berhasil ditambahkan.');
+        }
+
     }
     
 
