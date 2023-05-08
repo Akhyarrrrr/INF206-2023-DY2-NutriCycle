@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+route::get('/redirects', [HomeController::class, "index"]);
 
 // untuk menampilkan dashboard dan memverifikasi login beserta mengambil nama user
 Route::get('/dashboard', function () {
@@ -54,6 +57,8 @@ Route::get('/pemanggilan', function () {
     return view('pemanggilan');
 });
 
+Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
+
 //untuk menampilkan ke arah page produk
 Route::get('/produk', function () {
     return view('produk');
@@ -71,6 +76,14 @@ Route::get('/about', function () {
 // untuk menampilkan view help
 Route::get('/help', function () {
     return view('help');
+});
+
+Route::get('/order', function () {
+    return view('/petugas/order');
+});
+
+Route::get('/pickup', function () {
+    return view('petugas/pickup');
 });
 
 // yang di atas require maka akan di akses di dalam login
