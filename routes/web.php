@@ -62,7 +62,12 @@ Route::get('/pemanggilan', function () {
 
 
 
-  //untuk mengarahkan ke page page yang ada pada admin
+//untuk mengarahkan ke page page yang ada pada admin
+Route::middleware('admin')->group(function () {
+    Route::get('/admin_produk', [AllController::class, 'admin_produk'])->name('produk-read');
+    Route::post('/produk_tambah', [AllController::class, 'produk_tambah'])->name('produk-tambah');
+    Route::post('/produk_update', [AllController::class, 'produk_update'])->name('produk-update');
+    Route::get('/produk_delete/{id}', [AllController::class, 'produk_delete'])->name('produk-delete');
 
 
 
