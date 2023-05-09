@@ -36,8 +36,8 @@ Route::middleware('auth')->group(function () {
 });
 
 //untuk menampilkan ke arah page produk
-
-
+    //dengan menggunakan function produk di dalam allcontrollers
+    Route::get('/produk', [AllController::class, 'produk']);
 
  //untuk menampilkan ke arah page keranjang
 
