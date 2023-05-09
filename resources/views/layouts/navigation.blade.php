@@ -34,17 +34,31 @@
                     </x-slot>
 
                     <x-slot name="content">
+                    @if (Auth::user()->role == 0)
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
-                         <x-dropdown-link : href="{{ url('/about') }}">
+                        <x-dropdown-link : href="{{ url('/about') }}">
                             {{ __('About us') }}
                         </x-dropdown-link>
 
                         <x-dropdown-link : href="{{ url('/help') }}">
                             {{ __('HELP') }}
                         </x-dropdown-link>
+                        @endif
+
+                        @if (Auth::user()->role ==1 )
+                            <x-dropdown-link : href="{{ url('/admin_produk') }}">
+                                {{ __('Produk') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link : href="{{ url('/transaksi') }}">
+                                {{ __('transaksi') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link : href="{{ url('/admin_pemanggilan') }}">
+                                {{ __('Pemanggilan Petugas') }}
+                            </x-dropdown-link>
+                        @endif
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
