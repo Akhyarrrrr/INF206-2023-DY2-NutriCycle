@@ -36,10 +36,15 @@ Route::middleware('auth')->group(function () {
 });
 
 //untuk menampilkan ke arah page produk
+    //dengan menggunakan function produk di dalam allcontrollers
+    Route::get('/produk', [AllController::class, 'produk']);
 
+//untuk menampilkan ke arah page keranjang
+Route::get('/keranjang', [AllController::class, 'keranjang']);
+Route::get('/add_cart/{id}', [AllController::class, 'add_cart'])->name('add_cart');
 
-
- //untuk menampilkan ke arah page keranjang
+Route::get('/update_cart/{id}/{tipe}', [AllController::class, 'update_cart'])->name('update_cart');
+Route::post('/checkout', [AllController::class, 'checkout'])->name('checkout');
 
 
  //untuk menampilkan ke arah page pelayanan
