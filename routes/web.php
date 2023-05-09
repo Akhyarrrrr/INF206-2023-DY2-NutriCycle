@@ -19,11 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/redirects', [HomeController::class, "index"]);
-
 // untuk menampilkan dashboard dan memverifikasi login beserta mengambil nama user
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    if (Auth::user()->role == 1) {
+        return redirect()->route('produk-read');
+    } else {
+        return view('dashboard');
+    }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //untuk menampilkan ke arah page profil
@@ -32,6 +34,34 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//untuk menampilkan ke arah page produk
+
+
+
+ //untuk menampilkan ke arah page keranjang
+
+
+ //untuk menampilkan ke arah page pelayanan
+Route::get('/pelayanan', function () {
+    return view('pelayanan');
+});
+
+// untuk menampilkan kearah page pemanggilan
+Route::get('/pemanggilan', function () {
+    return view('pemanggilan');
+});
+
+ //mengirim data dengan nama function pemanggilan tambah dari halaman pemanggilan
+
+
+
+
+  //untuk mengarahkan ke page page yang ada pada admin
+
+
+
+  
 
 //untuk masuk ke dalam register
 Route::get('/signup', function () {
@@ -47,15 +77,7 @@ Route::get('/login', function () {
 Route::get('/home', function () {
     return view('home');
 });
-//untuk menampilkan ke arah page pelayanan
-Route::get('/pelayanan', function () {
-    return view('pelayanan');
-});
 
-// untuk menampilkan kearah page pemanggilan
-Route::get('/pemanggilan', function () {
-    return view('pemanggilan');
-});
 
 Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
 
