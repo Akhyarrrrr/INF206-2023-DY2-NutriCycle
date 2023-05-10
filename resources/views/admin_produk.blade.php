@@ -1,5 +1,5 @@
 <x-app-layout>
-<x-slot name="header">
+    <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Data Produk
         </h2>
@@ -49,7 +49,7 @@
                         @endforelse
                     </tbody>
                 </table>
-                </div>
+            </div>
 
             <!-- Modal -->
             <div class="modal fade" id="modal-tambah" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -98,6 +98,7 @@
                     </div>
                 </div>
             </div>
+
             @foreach ($data as $key => $value)
                 <div class="modal fade" id="edit-{{ $value->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -166,7 +167,4 @@
             })
         </script>
     @endif
-
-
-
 </x-app-layout>
