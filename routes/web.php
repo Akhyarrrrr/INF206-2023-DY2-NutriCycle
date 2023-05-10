@@ -72,6 +72,9 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin_pemanggilan', [AllController::class, 'admin_pemanggilan'])->name('pemanggilan-read');
     Route::get('/pemanggilan_selesai/{id}', [AllController::class, 'pemanggilan_selesai'])->name('pemanggilan-selesai');
     Route::get('/pemanggilan_delete/{id}', [AllController::class, 'pemanggilan_delete'])->name('pemanggilan-delete');
+    Route::get('/transaksi', [AllController::class, 'transaksi'])->name('transaksi');
+    Route::get('/transaksi_selesai/{id}', [AllController::class, 'transaksi_selesai'])->name('transaksi-selesai');
+});
 
 
 //untuk masuk ke dalam register
