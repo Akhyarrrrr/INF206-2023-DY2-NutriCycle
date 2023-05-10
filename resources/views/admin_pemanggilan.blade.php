@@ -1,5 +1,4 @@
 <x-app-layout>
-
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             Data Pemanggilan
@@ -25,7 +24,28 @@
                             <th>Aksi</th>
                         </tr>
                     </thead>
-                    </table>
+                    <tbody>
+                        @forelse ($data as $key => $value)
+                        <tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>{{ $value->user->name }}</td>
+                            <td>{{ $value->user->alamat }}</td>
+                            <td>{{ $value->tanggal }}</td>
+                            <td>{{ $value->jam }}</td>
+                            <td>
+                                @if ($value->status == 0)
+                                <a href="{{ route('pemanggilan-selesai', $value->id) }}" class="btn btn-primary">Selesaikan</a>
+                                @else
+                                <button type="button" class="btn btn-success" disabled>Sukses</button>
+                                @endif
+                            </td>
+                        </tr>
+
+                        @empty
+                        Data Kosong
+                        @endforelse
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -34,14 +54,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     @if (session('success'))
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: '{{ session('success') }}',
-                showConfirmButton: false,
-                timer: 2000
-            })
-        </script>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '{{ session('
+            success ') }}',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    </script>
     @endif
-
 </x-app-layout>
