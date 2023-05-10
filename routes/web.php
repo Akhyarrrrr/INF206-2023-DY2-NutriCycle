@@ -58,6 +58,7 @@ Route::get('/pemanggilan', function () {
 });
 
  //mengirim data dengan nama function pemanggilan tambah dari halaman pemanggilan
+ Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
 
 
 
@@ -68,10 +69,8 @@ Route::middleware('admin')->group(function () {
     Route::post('/produk_tambah', [AllController::class, 'produk_tambah'])->name('produk-tambah');
     Route::post('/produk_update', [AllController::class, 'produk_update'])->name('produk-update');
     Route::get('/produk_delete/{id}', [AllController::class, 'produk_delete'])->name('produk-delete');
+    Route::get('/admin_pemanggilan', [AllController::class, 'admin_pemanggilan'])->name('pemanggilan-read');
 
-
-
-  
 
 //untuk masuk ke dalam register
 Route::get('/signup', function () {
@@ -88,8 +87,6 @@ Route::get('/home', function () {
     return view('home');
 });
 
-
-Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
 
 //untuk menampilkan ke arah page produk
 Route::get('/produk', function () {
@@ -125,3 +122,5 @@ require __DIR__ . '/auth.php';
 Route::get('/', function () {
     return view('index');
 });
+
+
