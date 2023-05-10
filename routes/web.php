@@ -19,11 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::get('/redirects', [HomeController::class, "index"]);
-
 // untuk menampilkan dashboard dan memverifikasi login beserta mengambil nama user
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    if (Auth::user()->role == 1) {
+        return redirect()->route('produk-read');
+    } else {
+        return view('dashboard');
+    }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 //untuk menampilkan ke arah page profil
@@ -32,6 +34,44 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//untuk menampilkan ke arah page produk
+    //dengan menggunakan function produk di dalam allcontrollers
+    Route::get('/produk', [AllController::class, 'produk']);
+
+//untuk menampilkan ke arah page keranjang
+Route::get('/keranjang', [AllController::class, 'keranjang']);
+Route::get('/add_cart/{id}', [AllController::class, 'add_cart'])->name('add_cart');
+
+Route::get('/update_cart/{id}/{tipe}', [AllController::class, 'update_cart'])->name('update_cart');
+Route::post('/checkout', [AllController::class, 'checkout'])->name('checkout');
+
+
+ //untuk menampilkan ke arah page pelayanan
+Route::get('/pelayanan', function () {
+    return view('pelayanan');
+});
+
+// untuk menampilkan kearah page pemanggilan
+Route::get('/pemanggilan', function () {
+    return view('pemanggilan');
+});
+
+ //mengirim data dengan nama function pemanggilan tambah dari halaman pemanggilan
+
+
+
+
+//untuk mengarahkan ke page page yang ada pada admin
+Route::middleware('admin')->group(function () {
+    Route::get('/admin_produk', [AllController::class, 'admin_produk'])->name('produk-read');
+    Route::post('/produk_tambah', [AllController::class, 'produk_tambah'])->name('produk-tambah');
+    Route::post('/produk_update', [AllController::class, 'produk_update'])->name('produk-update');
+    Route::get('/produk_delete/{id}', [AllController::class, 'produk_delete'])->name('produk-delete');
+
+
+
+  
 
 //untuk masuk ke dalam register
 Route::get('/signup', function () {
@@ -47,15 +87,7 @@ Route::get('/login', function () {
 Route::get('/home', function () {
     return view('home');
 });
-//untuk menampilkan ke arah page pelayanan
-Route::get('/pelayanan', function () {
-    return view('pelayanan');
-});
 
-// untuk menampilkan kearah page pemanggilan
-Route::get('/pemanggilan', function () {
-    return view('pemanggilan');
-});
 
 Route::post('/pemangilan_tambah', [AllController::class, 'pemanggilan_tambah'])->name('pemanggilan_tambah');
 
