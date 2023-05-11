@@ -102,69 +102,69 @@ class AllController extends Controller
 
         // Redirect ke halaman sukses checkout
         return redirect('/produk')->with('success', 'Transaksi Sedang Di Proses');
-        }
-        public function admin_produk()
-        {
-            return view('admin_produk', [
-                "data" => Produk::get()
-            ]);
-        }
-        public function produk_tambah(Request $request)
-        {
-            $produk = new Produk();
-            $produk->nama = $request->nama;
-            $produk->harga = $request->harga;
+    }
+    public function admin_produk()
+    {
+        return view('admin_produk', [
+            "data" => Produk::get()
+        ]);
+    }
+    public function produk_tambah(Request $request)
+    {
+        $produk = new Produk();
+        $produk->nama = $request->nama;
+        $produk->harga = $request->harga;
 
-            if ($request->hasFile('gambar')) {
-                $gambar = $request->file('gambar');
-                $filename = time() . '.' . $gambar->getClientOriginalExtension();
-                $gambar->move(public_path('images'), $filename);
-                $produk->gambar = $filename;
-            }
-
-            if ($request->promo) {
-                $produk->harga_promo = $request->promo;
-                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
-            }
-
-            $produk->save();
-
-            return redirect()->route('produk-read')->with('success', 'Produk berhasil ditambahkan.');
-        }
-        public function produk_update(Request $request)
-        {
-            $produk = Produk::findOrFail($request->id);
-
-            $produk->nama = $request->nama;
-            $produk->harga = $request->harga;
-
-            if ($request->hasFile('gambar')) {
-                $gambar = $request->file('gambar');
-                $filename = time() . '.' . $gambar->getClientOriginalExtension();
-                $gambar->move(public_path('images'), $filename);
-                $produk->gambar = $filename;
-            }
-
-            if ($request->harga_promo != 0) {
-                $produk->harga_promo = $request->harga_promo;
-                $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
-            } else {
-                $produk->harga_promo = 0;
-                $produk->tanggal_promo_berakhir = null;
-            }
-
-            $produk->save();
-
-            return redirect()->route('produk-read')->with('success', 'Produk berhasil diupdate.');
-        }
-        public function produk_delete($id)
-        {
-            Produk::find($id)->delete();
-
-            return redirect()->route('produk-read')->with('success', 'Produk berhasil dihapus.');
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $filename = time() . '.' . $gambar->getClientOriginalExtension();
+            $gambar->move(public_path('images'), $filename);
+            $produk->gambar = $filename;
         }
 
-        public function pemanggilan_tambah(Request $request)
+        if ($request->promo) {
+            $produk->harga_promo = $request->promo;
+            $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+        }
+
+        $produk->save();
+
+        return redirect()->route('produk-read')->with('success', 'Produk berhasil ditambahkan.');
+    }
+    public function produk_update(Request $request)
+    {
+        $produk = Produk::findOrFail($request->id);
+
+        $produk->nama = $request->nama;
+        $produk->harga = $request->harga;
+
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $filename = time() . '.' . $gambar->getClientOriginalExtension();
+            $gambar->move(public_path('images'), $filename);
+            $produk->gambar = $filename;
+        }
+
+        if ($request->harga_promo != 0) {
+            $produk->harga_promo = $request->harga_promo;
+            $produk->tanggal_promo_berakhir = $request->tanggal_promo_berakhir;
+        } else {
+            $produk->harga_promo = 0;
+            $produk->tanggal_promo_berakhir = null;
+        }
+
+        $produk->save();
+
+        return redirect()->route('produk-read')->with('success', 'Produk berhasil diupdate.');
+    }
+    public function produk_delete($id)
+    {
+        Produk::find($id)->delete();
+
+        return redirect()->route('produk-read')->with('success', 'Produk berhasil dihapus.');
+    }
+
+    public function pemanggilan_tambah(Request $request)
     {
         Pemanggilan::create([
             "user_id" => Auth::user()->id,
@@ -174,7 +174,79 @@ class AllController extends Controller
 
         return back()->with('success', 'Petugas segera menuju lokasi!');
     }
+    public function pemanggilan_selesai($id)
+    {
+        Pemanggilan::find($id)->update([
+            "status" => 1
+        ]);
 
+        return back()->with('success', 'Data telah dirubah');
     }
 
+    public function admin_pemanggilan()
+    {
+        return view('admin_pemanggilan', [
+            "data" => Pemanggilan::get()
+        ]);
+    }
 
+    public function transaksi_selesai($id)
+    {
+        Transaksi::find($id)->update([
+            "status" => 1
+        ]);
+
+        return back()->with('success', 'Data telah dirubah');
+    }
+
+    public function transaksi()
+    {
+        return view('transaksi', [
+            "data" => Transaksi::get()
+        ]);
+    }
+
+    public function edit(Request $request): View
+    {
+        return view('profile.edit', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    /**
+     * Update the user's profile information.
+     */
+    public function update(ProfileUpdateRequest $request): RedirectResponse
+    {
+        $request->user()->fill($request->validated());
+
+        if ($request->user()->isDirty('email')) {
+            $request->user()->email_verified_at = null;
+        }
+
+        $request->user()->save();
+
+        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+    }
+
+    /**
+     * Delete the user's account.
+     */
+    public function destroy(Request $request): RedirectResponse
+    {
+        $request->validateWithBag('userDeletion', [
+            'password' => ['required', 'current_password'],
+        ]);
+
+        $user = $request->user();
+
+        Auth::logout();
+
+        $user->delete();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return Redirect::to('/');
+    }
+}
